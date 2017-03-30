@@ -95,13 +95,13 @@ a {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 #content a {
   text-decoration: none;
-  color: #cc2a35;
+  color: #9a2328;
 }
 
 #content a:hover {
@@ -111,6 +111,12 @@ a {
 #authors {
   font-size: 20px;
   padding-bottom: 20px;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+#authors a {
+  color: rgba(154, 35, 40, 0.8);
 }
 
 #info-table {
