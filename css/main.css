@@ -54,7 +54,7 @@ a {
 }
 
 #menu-items a {
-  margin-left: 40px;
+  margin-left: 30px;
   text-decoration: none;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -129,8 +129,7 @@ a {
 }
 
 .buttons {
-  float: right;
-  padding: 5px 0 5px 0;
+  padding: 15px 0 15px 0;
   margin: 0;
 }
 
@@ -204,4 +203,10 @@ a {
 
 #download-android img {
   width: 180px;
+}
+
+#download-button {
+  width: 220px;
+  height: 35px;
+  line-height: 35px;
 }
