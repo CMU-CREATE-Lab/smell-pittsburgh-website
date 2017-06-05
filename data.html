@@ -27,14 +27,29 @@
     <table id="info-table">
       <tr>
         <td colspan="2">
+          <div class="heading-button">
+            <a target="_blank" href="http://staging.api.smellpittsburgh.org/api/v1/smell_reports?area=PGH&format=csv" id="download-button" class="custom-button noselect">Download Smell Report Data for Allegheny County</a>
+          </div>
           <p class="text">
-            Get data
+            <span class="highlight-text">We take every precaution to protect any personally identifiable data.</span>
+            All information shown on the public map visualization for Smell PGH is anonymous and location data is skewed to protect your privacy.
+            Personal contact information you enter in the settings tab is only shared with ACHD and not stored in our database.
+            Our backend database only contains anonymous User IDs created by your app service (Apple or Google Play).
           </p>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <div id="download-button" class="custom-button noselect">Download Smell Reports</div>
+          <p class="text">
+            This data is in a <span class="highlight-text">CSV format</span>.
+            You can open it in Google Sheets, Excel, or any text editor.
+            Each smell report is a unique line item.
+            Each field in the line is separated by commas.
+            Data fields include:
+            <ul>
+              <li>Date of Smell Report</li>
+              <li>Time of Smell Report</li>
+              <li>Smell rating (a number 1 through 5; 5 being the most severe)</li>
+              <li>Location of Smell Report (zip code only)</li>
+              <li>Smell description (if provided)</li>
+            </ul>
+          </p>
         </td>
       </tr>
     </table>
