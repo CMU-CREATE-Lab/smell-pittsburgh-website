@@ -26,7 +26,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  width: 900px;
+  width: 850px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 45px;
@@ -89,8 +89,8 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  width: 900px;
-  text-align: center;
+  width: 850px;
+  text-align: justify;
   font-size: 16px;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -118,7 +118,6 @@ a {
 }
 
 .text {
-  text-align: justify;
   padding: 15px 0 15px 0;
   margin: 0;
 }
@@ -131,6 +130,7 @@ a {
 .buttons {
   padding: 15px 0 15px 0;
   margin: 0;
+  float: right;
 }
 
 .heading {
@@ -167,6 +167,7 @@ a {
   cursor: pointer;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   transition: background-color 0.2s, box-shadow 0.2s;
+  padding: 10px 20px 10px 20px;
 }
 
 .custom-button:hover {
@@ -198,15 +199,21 @@ a {
 }
 
 #download-ios img {
- width: 180px;
+  width: 180px;
 }
 
 #download-android img {
   width: 180px;
 }
 
-#download-button {
-  width: 220px;
-  height: 35px;
-  line-height: 35px;
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
