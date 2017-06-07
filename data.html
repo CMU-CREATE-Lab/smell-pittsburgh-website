@@ -24,12 +24,14 @@
 </div>
 <div id="content-container">
   <div id="content">
-    <table id="info-table">
+    <table class="info-table">
       <tr>
         <td colspan="2">
-          <div class="heading-button">
-            <a target="_blank" href="http://staging.api.smellpittsburgh.org/api/v1/smell_reports?area=PGH&format=csv" id="download-button" class="custom-button noselect">Download Smell Report Data for Allegheny County</a>
-          </div>
+          <p class="heading-2">Download Smell Report Data for Allegheny County</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
           <p class="text">
             <span class="highlight-text">We take every precaution to protect any personally identifiable data.</span>
             All information shown on the public map visualization for Smell PGH is anonymous and location data is skewed to protect your privacy.
@@ -50,6 +52,9 @@
               <li>Smell description (if provided)</li>
             </ul>
           </p>
+          <div class="heading-button">
+            <a target="_blank" href="http://staging.api.smellpittsburgh.org/api/v1/smell_reports?area=PGH&format=csv" id="download-button" class="custom-button noselect">Download Smell Reports</a>
+          </div>
         </td>
       </tr>
     </table>

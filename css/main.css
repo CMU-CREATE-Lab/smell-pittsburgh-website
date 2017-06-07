@@ -112,12 +112,12 @@ a {
   text-decoration: underline;
 }
 
-#info-table {
+.info-table {
   width: 100%;
   margin: 0;
 }
 
-#info-table td {
+.info-table td {
   border-spacing: 0;
 }
 
@@ -172,16 +172,16 @@ a {
 
 .heading-button {
   text-align: left;
-  padding: 5px 0 25px 0;
+  padding: 15px 0 20px 0;
   margin: 0;
 }
 
 #UI-image-1 {
-  width: 95%;
+  width: 94%;
 }
 
 #UI-image-2 {
-  width: 95%;
+  width: 94%;
 }
 
 .force-scroll {
@@ -261,4 +261,16 @@ ul {
 #download-button {
   font-size: 20px;
   padding: 15px 30px 15px 30px;
+}
+
+.video {
+  padding: 15px 0 15px 0;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }
