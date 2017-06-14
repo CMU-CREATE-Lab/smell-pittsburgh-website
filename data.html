@@ -7,6 +7,14 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
   <script src="lib/jquery-3.2.0.min.js" type="text/javascript"></script>
+  <script>
+    function setDownloadUrl() {
+      var root_url = "http://api.smellpittsburgh.org/";
+      var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
+      $("#download-button").attr("href", root_url + api_url);
+    }
+    $(setDownloadUrl)
+  </script>
 </head>
 <body>
 <div id="menu-container" class="noselect">
@@ -53,7 +61,7 @@
             </ul>
           </p>
           <div class="heading-button">
-            <a target="_blank" href="http://staging.api.smellpittsburgh.org/api/v1/smell_reports?allegheny_county_only=true&format=csv" id="download-button" class="custom-button noselect">Download Smell Reports</a>
+            <a target="_blank" href="javascript:void(0)" id="download-button" class="custom-button noselect">Download Smell Reports</a>
           </div>
         </td>
       </tr>
