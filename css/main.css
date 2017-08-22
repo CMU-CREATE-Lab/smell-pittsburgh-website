@@ -1,59 +1,65 @@
+/*************************************************************************
+ * This css is developed by Yen-Chia Hsu
+ * Copyright Yen-Chia Hsu.
+ * GitHub: https://github.com/yenchiah/project-website-template
+ * Contact: hsu.yenchia@gmail.com
+ * License: GNU General Public License v2
+ * Version: v1.2
+ *************************************************************************/
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: white;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  min-width: 940px;
 }
 
 a {
   outline: none;
+  cursor: pointer;
 }
 
-#menu-container {
+.menu-container {
   z-index: 2;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #4d4d4d;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 3px 7px rgba(0, 0, 0, 0.3)
-}
-
-#menu {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  width: 900px;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 45px;
+  width: 100%;
+  background-color: #212121;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-#logo {
+.menu {
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.menu-table {
+  padding: 0 20px;
+  width: 100%;
+  margin: 0;
+  height: 50px;
+}
+
+.logo {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
-  float: left;
-  margin-top: -6px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-#logo a {
+.logo a {
   text-decoration: none;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.8);
 }
 
-#menu-items {
+.menu-items {
   float: right;
-  margin-top: 4px;
   font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-#menu-items a {
+.menu-items a {
   margin-left: 30px;
   text-decoration: none;
   font-weight: 500;
@@ -64,7 +70,7 @@ a {
   -webkit-transition: opacity 0.2s ease-in-out;
 }
 
-#menu-items a:hover {
+.menu-items a:hover {
   color: rgb(255, 255, 255);
   opacity: 1;
 }
@@ -75,128 +81,110 @@ a {
   font-weight: 700 !important;
 }
 
-#content-container {
+.content-container {
   z-index: 1;
-  position: absolute;
-  top: 60px;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  height: auto;
 }
 
-#content {
+.content {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  width: 900px;
-  text-align: justify;
+  margin: 0 auto;
   font-size: 16px;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  padding-bottom: 35px;
-  padding-top: 35px;
+  max-width: 940px;
 }
 
-.highlight-text {
-  font-weight: bold;
-}
-
-#content a {
+.content p a {
   text-decoration: none;
   color: #9a2328;
 }
 
-#content a:hover {
+.content p a:hover {
   text-decoration: underline;
 }
 
-.info-table {
+.content-table {
+  padding: 20px;
   width: 100%;
   margin: 0;
 }
 
-.info-table td {
-  border-spacing: 0;
+.left-align {
+  float: left;
 }
 
-.text {
-  padding: 12px 0 12px 0;
-  margin: 0;
-}
-
-.text-small-padding {
-  padding: 8px 0 8px 0;
-  margin: 0;
-}
-
-.text-small-no-top-padding {
-  padding: 0 0 8px 0;
-  margin: 0;
-}
-
-.text-small-no-bottom-padding {
-  padding: 8px 0 0 0;
-  margin: 0;
-}
-
-.image {
-  padding: 15px 0 15px 0;
-  margin: 0;
-}
-
-.buttons {
-  padding: 10px 0 12px 0;
-  margin: 0;
+.right-align {
   float: right;
 }
 
-.heading {
-  text-align: left;
-  padding: 5px 0 10px 0;
-  margin: 0;
-  font-size: 40px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.8);
+h2 {
+  font-size: 24px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-.heading-2 {
-  text-align: left;
-  padding: 0px 0 10px 0;
-  margin: 0;
-  font-size: 30px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.8);
+.text {
+  margin: 15px 0 15px 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-.heading-button {
-  text-align: left;
-  padding: 15px 0 20px 0;
-  margin: 0;
+.text-large-margin {
+  margin: 25px 0 25px 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-#UI-image-1 {
-  width: 94%;
+.image {
+  margin: 15px 0 15px 0;
+  padding: 0;
+  border: 1px solid #666666;
+  vertical-align: middle;
 }
 
-#UI-image-2 {
-  width: 94%;
+.video {
+  margin: 15px 0 15px 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-.force-scroll {
-  overflow-y: scroll;
+.image-button {
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: block;
+  border: 1px solid #666666;
+  margin: 10px 0 5px 0;
+  padding: 0;
+  transition: border 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.force-no-scroll {
-  overflow-y: hidden;
+.image-button:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+  border: 1px solid #222222;
+}
+
+.image-button-caption {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .custom-button {
+  padding: 10px 25px;
   display: table;
   text-align: center;
   background-color: #7d7d7d;
-  color: white !important;
+  color: white;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 14px;
   outline: none;
@@ -205,13 +193,10 @@ a {
   cursor: pointer;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   transition: background-color 0.2s, box-shadow 0.2s;
-  padding: 12px 25px 12px 25px;
-  text-decoration: none !important;
 }
 
 .custom-button:hover {
   background-color: #4d4d4d;
-  text-decoration: none !important;
 }
 
 .custom-button:active {
@@ -228,49 +213,62 @@ a {
   user-select: none; /* Non-prefixed version, currently not supported by any browser */
 }
 
-#viz-iframe {
+.center-align-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-align-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text-large {
+  font-size: 20px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.iframe-container {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  min-width: 940px;
+}
+
+.iframe {
   border: 0;
   width: 100%;
   height: 100%;
 }
 
-#download-ios {
-  padding-right: 30px;
+.force-no-scroll {
+  overflow-y: hidden;
 }
 
-#download-ios img {
-  width: 180px;
+.force-scroll {
+  overflow-y: scroll;
 }
 
-#download-android img {
-  width: 180px;
-}
-
-h2 {
-  padding: 0px 0 10px 0;
-  margin: 0;
-}
-
-ul {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-#download-button {
-  font-size: 20px;
-  padding: 15px 30px 15px 30px;
-}
-
-.video {
-  padding: 15px 0 15px 0;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
+.highlight-text {
+  font-weight: bold;
 }

@@ -3,6 +3,7 @@
 <head>
   <title>Smell Pittsburgh</title>
   <link href="css/main.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="css/index.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
@@ -17,36 +18,45 @@
   </script>
 </head>
 <body>
-<div id="menu-container" class="noselect">
-  <div id="menu">
-    <div id="logo">
-      <a href="index.html">Smell Pittsburgh</a>
-    </div>
-    <div id="menu-items">
-      <a href="index.html">Overview</a>
-      <a href="how_it_works.html">How it Works</a>
-      <a href="javascript:void(0)" class="menu-highlight">Data</a>
-      <a href="visualization.html">Visualization</a>
-    </div>
+<div class="menu-container noselect">
+  <div class="menu">
+    <table class="menu-table">
+      <tr>
+        <td>
+          <div class="logo">
+            <a href="index.html">Smell Pittsburgh</a>
+          </div>
+        </td>
+        <td>
+          <div class="menu-items">
+            <a href="index.html">Overview</a>
+            <a href="how_it_works.html">How it Works</a>
+            <a href="javascript:void(0)" class="menu-highlight">Data</a>
+            <a href="visualization.html">Visualization</a>
+            <a target="_blank" href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-rails">GitHub</a>
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
-<div id="content-container">
-  <div id="content">
-    <table class="info-table">
+<div class="content-container">
+  <div class="content">
+    <table class="content-table">
       <tr>
         <td colspan="2">
-          <p class="heading-2">Download Smell Report Data for Allegheny County</p>
+          <h2>Download Smell Report Data for Allegheny County</h2>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <p class="text">
+          <p class="text text-justify">
             <span class="highlight-text">We take every precaution to protect any personally identifiable data.</span>
             All information shown on the public map visualization for Smell PGH is anonymous and location data is skewed to protect your privacy.
             Personal contact information you enter in the settings tab is only shared with ACHD and not stored in our database.
             Our backend database only contains anonymous User IDs created by your app service (Apple or Google Play).
           </p>
-          <p class="text">
+          <p class="text text-justify">
             This data is in a <span class="highlight-text">CSV format</span>.
             You can open it in Google Sheets, Excel, or any text editor.
             Each smell report is a unique line item.
@@ -60,9 +70,7 @@
               <li>Smell Description (if provided)</li>
             </ul>
           </p>
-          <div class="heading-button">
-            <a target="_blank" href="javascript:void(0)" id="download-button" class="custom-button noselect">Download Smell Reports</a>
-          </div>
+          <a target="_blank" href="javascript:void(0)" id="download-button" class="custom-button noselect">Download Smell Reports</a>
         </td>
       </tr>
     </table>
