@@ -150,6 +150,7 @@ h2 {
   margin: 15px 0 15px 0;
   padding: 0;
   vertical-align: middle;
+  border: 1px solid #666666;
 }
 
 .image-button {
