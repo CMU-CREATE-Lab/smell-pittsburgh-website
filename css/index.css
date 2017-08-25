@@ -28,7 +28,7 @@
 }
 
 #download-button {
-  margin-top: 35px;
+  padding: 20px 40px;
+  margin-top: 15px;
   font-size: 20px;
-  text-decoration: none;
 }
