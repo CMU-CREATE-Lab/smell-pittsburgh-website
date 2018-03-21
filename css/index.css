@@ -4,7 +4,7 @@
   margin: 0;
   font-size: 35px;
   font-weight: 700;
-  color: #9a2328;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 #download-ios {
@@ -34,9 +34,4 @@
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 20px;
-  background-color: #c17070;
-}
-
-#download-button:hover {
-  background-color: #9a2328;
 }
