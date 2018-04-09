@@ -18,3 +18,7 @@
     width:auto;
     position:relative;
 }
+
+#playbutton_wrapper {
+  cursor: pointer;
+}
