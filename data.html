@@ -4,6 +4,7 @@
   <title>Smell Pittsburgh</title>
   <link href="css/main.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="css/data.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
@@ -77,6 +78,15 @@
         </td>
       </tr>
     </table>
+    <h2>Smell Report Highlight Reel</h2>
+    <hr>
+    <div id="playbutton_wrapper">
+      <video id="smellpgh2017" width="100%" muted playsinline class="video left-align">
+        <source src="vid/smellpgh2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div id="playbutton"></div>
+    </div>
   </div>
 </div>
 </body>
@@ -95,5 +105,15 @@
 
   ga('create', 'UA-10682694-20', 'auto');
   ga('send', 'pageview');
+
+  $("#playbutton_wrapper").on("click", function() {
+    if ($("#smellpgh2017").get(0).paused) {
+      $("#playbutton").hide();
+      $("#smellpgh2017").get(0).play();
+    } else {
+      $("#playbutton").show();
+      $("#smellpgh2017").get(0).pause();
+    }
+  });
 </script>
 </html>
