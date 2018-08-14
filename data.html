@@ -15,6 +15,7 @@
       var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
       $("#download-button").attr("href", root_url + api_url);
     }
+
     $(setDownloadUrl)
   </script>
 </head>
@@ -68,10 +69,6 @@
             <li>Location of Smell Report (zip code only)</li>
             <li>Smell Description (if provided)</li>
           </ul>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
           <div class="left-align-content">
             <a target="_blank" href="javascript:void(0)" id="download-button" class="custom-button noselect">Download Smell Reports</a>
           </div>
@@ -82,8 +79,11 @@
         <td colspan="2">
           <h2>Smell Report Highlight Reel</h2>
           <hr>
+          <p class="text">
+            The following video animates the daily summary of crowdsourced smell reports. Each frame in the video represents one day.
+          </p>
           <div id="playbutton_wrapper">
-            <video id="smellpgh2017" width="100%" muted playsinline class="video left-align">
+            <video id="smellpgh2017" width="100%" muted playsinline class="image left-align">
               <source src="vid/smellpgh2017.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -99,8 +99,8 @@
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
     a = s.createElement(o),
       m = s.getElementsByTagName(o)[0];
     a.async = 1;
@@ -111,7 +111,7 @@
   ga('create', 'UA-10682694-20', 'auto');
   ga('send', 'pageview');
 
-  $("#playbutton_wrapper").on("click", function() {
+  $("#playbutton_wrapper").on("click", function () {
     if ($("#smellpgh2017").get(0).paused) {
       $("#playbutton").hide();
       $("#smellpgh2017").get(0).play();
