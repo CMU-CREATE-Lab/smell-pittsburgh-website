@@ -1,6 +1,54 @@
+/*************************************************************************
+ * This css file is for your own style.
+ *************************************************************************/
+
+.menu {
+  max-width: 900px;
+}
+
+.content {
+  max-width: 900px;
+}
+
+@media screen and (min-width: 900px) {
+  .flex-item-stretch {
+    flex: 1;
+  }
+  .flex-item-stretch-2 {
+    flex: 2;
+  }
+}
+
 #download-button {
-  padding: 20px 40px;
-  margin-top: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+#play-button {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+  background-image: url("/img/play.png");
+  background-repeat: no-repeat;
+}
+
+#play-button-wrapper {
+  display: table;
+  width: auto;
+  position: relative;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#demo-video {
+  max-width: 404px;
 }

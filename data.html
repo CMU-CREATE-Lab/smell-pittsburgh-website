@@ -2,51 +2,36 @@
 <html>
 <head>
   <title>Smell Pittsburgh</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
   <link href="css/main.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="css/index.css" media="screen" rel="stylesheet" type="text/css"/>
-  <link href="css/data.css" media="screen" rel="stylesheet" type="text/css"/>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
   <script src="lib/jquery-3.2.0.min.js" type="text/javascript"></script>
-  <script>
-    function setDownloadUrl() {
-      var root_url = "http://api.smellpittsburgh.org/";
-      var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
-      $("#download-button").attr("href", root_url + api_url);
-    }
-
-    $(setDownloadUrl)
-  </script>
 </head>
 <body>
 <div class="menu-container noselect">
   <div class="menu">
-    <table class="menu-table">
-      <tr>
-        <td>
-          <div class="logo">
-            <a href="index">Smell Pittsburgh</a>
-          </div>
-        </td>
-        <td>
-          <div class="menu-items">
-            <a href="index">Overview</a>
-            <a href="how_it_works">How it Works</a>
-            <a href="javascript:void(0)" class="menu-highlight">Data</a>
-            <a href="visualization">Visualization</a>
-            <!--<a target="_blank" href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-rails">GitHub</a>-->
-          </div>
-        </td>
-      </tr>
-    </table>
+    <div class="menu-table flex-row-space-between">
+      <div class="logo flex-item">
+        <a href="index.html">Smell Pittsburgh</a>
+      </div>
+      <div class="menu-items flex-item">
+        <a href="index.html">Overview</a>
+        <a href="how_it_works.html">How it Works</a>
+        <a href="javascript:void(0)" class="menu-highlight">Data</a>
+        <a href="visualization.html">Visualization</a>
+      </div>
+    </div>
   </div>
 </div>
 <div class="content-container">
   <div class="content">
-    <table class="content-table">
-      <tr>
-        <td colspan="2">
+    <div class="content-table flex-column">
+      <div class="flex-row">
+        <div class="flex-item flex-column">
           <h2>Download Smell Report Data for Allegheny County</h2>
           <hr>
           <p class="text">
@@ -65,33 +50,35 @@
           <ul>
             <li>Date of Smell Report</li>
             <li>Time of Smell Report</li>
-            <li>Smell Rating (a number 1 through 5; 5 being the most severe)</li>
+            <li>Smell Rating (a number 1 through 5, with 5 being the most severe)</li>
             <li>Location of Smell Report (zip code only)</li>
             <li>Smell Description (if provided)</li>
           </ul>
           <div class="left-align-content">
             <a target="_blank" href="javascript:void(0)" id="download-button" class="custom-button noselect">Download Smell Reports</a>
           </div>
-          <p style="padding-bottom: 20px;" class="text">Looking for a more specific data query? Visit <a target="_blank" href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-rails/wiki/Welcome-to-Smell-PGH-API">Smell PGH API</a> to learn more about our API.</p>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
+          <p class="text">
+            Looking for a more specific data query? Visit <a target="_blank" href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-rails/wiki/Welcome-to-Smell-PGH-API">Smell PGH API</a> to learn more about our API.
+          </p>
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="flex-item flex-column">
           <h2>Smell Report Highlight Reel</h2>
           <hr>
           <p class="text">
-            The following video animates the daily summary of crowdsourced smell reports. Each frame in the video represents one day.
+            The following video animates the daily summary of smell reports. Each frame in the video represents one day.
           </p>
-          <div id="playbutton_wrapper">
+          <div id="play-button-wrapper">
             <video id="smellpgh2017" width="100%" muted playsinline class="image left-align">
               <source src="vid/smellpgh2017.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <div id="playbutton"></div>
+            <div id="play-button"></div>
           </div>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </body>
@@ -111,14 +98,22 @@
   ga('create', 'UA-10682694-20', 'auto');
   ga('send', 'pageview');
 
-  $("#playbutton_wrapper").on("click", function () {
+  $("#play-button-wrapper").on("click", function () {
     if ($("#smellpgh2017").get(0).paused) {
-      $("#playbutton").hide();
+      $("#play-button").hide();
       $("#smellpgh2017").get(0).play();
     } else {
-      $("#playbutton").show();
+      $("#play-button").show();
       $("#smellpgh2017").get(0).pause();
     }
   });
+
+  function setDownloadUrl() {
+    var root_url = "http://api.smellpittsburgh.org/";
+    var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
+    $("#download-button").attr("href", root_url + api_url);
+  }
+
+  $(setDownloadUrl)
 </script>
 </html>
