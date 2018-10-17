@@ -72,13 +72,10 @@
           <p class="text">
             The following video animates the daily summary of smell reports. Each frame in the video represents one day.
           </p>
-          <div id="play-button-wrapper">
-            <video id="smellpgh2017" width="100%" muted playsinline class="image left-align">
-              <source src="vid/smellpgh2017.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div id="play-button"></div>
-          </div>
+          <video muted playsinline controls class="image noselect">
+            <source src="vid/smellpgh2017.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -100,16 +97,6 @@
 
   ga('create', 'UA-10682694-20', 'auto');
   ga('send', 'pageview');
-
-  $("#play-button-wrapper").on("click", function () {
-    if ($("#smellpgh2017").get(0).paused) {
-      $("#play-button").hide();
-      $("#smellpgh2017").get(0).play();
-    } else {
-      $("#play-button").show();
-      $("#smellpgh2017").get(0).pause();
-    }
-  });
 
   function setDownloadUrl() {
     var root_url = "http://api.smellpittsburgh.org/";
