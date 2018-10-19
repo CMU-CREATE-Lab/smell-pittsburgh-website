@@ -12,3 +12,15 @@
 #demo-video {
   max-width: 400px;
 }
+
+.iframe-container {
+  min-width: 340px !important;
+}
+
+.menu-container {
+  min-width: 340px !important;
+}
+
+.content-container {
+  min-width: 340px !important;
+}
