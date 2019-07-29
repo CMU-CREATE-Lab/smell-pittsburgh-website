@@ -151,14 +151,6 @@
 
   ga('create', 'UA-10682694-20', 'auto');
   ga('send', 'pageview');
-
-  function setDownloadUrl() {
-    var root_url = "http://api.smellpittsburgh.org/";
-    var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
-    $("#download-button").attr("href", root_url + api_url);
-  }
-
-  $(setDownloadUrl)
 </script>
 
 </html>
