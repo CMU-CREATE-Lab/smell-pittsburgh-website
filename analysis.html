@@ -30,6 +30,18 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+
+    .image,
+    .iframe-in-body {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    .analysis-graph-title {
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
   </style>
 </head>
 
@@ -154,37 +166,49 @@
             <h2 class="add-top-margin">Relationships between Smell Reports and Pollutants</h2>
             <hr>
             <p class="text">
-                The result discovered in the content analysis and the information obtained from informal community meetings suggested that hydrogen sulfide might be the primary source of odor pollution.
-                In the research paper, we have used statistical methods to select a subset of smell reports and analyze the relationship between these reports with hydrogen sulfide.
-                In the bottom figure, we visualize the <a href="https://link.springer.com/content/pdf/10.1007%2FBF00116251.pdf" target="_blank">decision tree</a> (i.e., the statistical model) and the pattern.
+              The result discovered in the content analysis and the information obtained from informal community meetings suggested that hydrogen sulfide might be the primary source of odor pollution.
+              In the research paper, we have used statistical methods to select a subset of smell reports and analyze the relationship between these reports and hydrogen sulfide concentration.
+              In the bottom figure, we visualize a part of the <a href="https://link.springer.com/content/pdf/10.1007%2FBF00116251.pdf" target="_blank">decision tree</a> (i.e., the statistical model) and the pattern.
             </p>
             <p class="text text-center analysis-graph-title">
               Pollution Pattern Identified by Statistical Analysis (10/31/2016 to 9/27/2018)
             </p>
             <img class="image center" src="img/smell_decision_tree.png" style="max-width: 810px;">
             <p class="text">
-                The decision tree is analogous to how a medical doctor diagnoses patients.
-                The top level of the tree shows the most important predictor, which is the interaction between the wind directions at Parkway monitoring station and the hydrogen sulfide concentration at the Liberty monitoring station.
-                The Allegany County Health Department operates these stations.
-                Based on this finding, we further investigate such relationships on a daily scale.
+              The decision tree is analogous to how a medical doctor diagnoses patients.
+              The top level of the tree shows the most important predictor, which is the interaction between the wind directions (at Parkway monitoring station) and the hydrogen sulfide concentration (at the Liberty monitoring station).
+              The Allegany County Health Department operates these monitoring stations.
+              Based on this finding, we further investigate such relationships on a daily scale.
             </p>
             <p class="text text-center analysis-graph-title">
               Sum of Smell Ratings by Date (2018)
             </p>
             <img class="image center" src="img/smell_heatmap_2018.png" style="max-width: 810px;">
             <p class="text text-center analysis-graph-title">
-                Maximum Concentration of Hydrogen Sulfide by Date (2018)
+              Maximum of Weighted Hydrogen Sulfide Concentration by Date (2018)
             </p>
             <img class="image center" src="img/esdr_heatmap_2018.png" style="max-width: 800px;">
             <p class="text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+              In the above two figures, we compare two metrics that are related to the smell reports and the air quality sensing data, respectively.
+              The first figure shows the sum of ratings in the smell reports for a day, excluding the reports with ratings that are less than three.
+              A darker color means that more people reported odor issues in the city.
+              The second figure shows the maximum concentration of hydrogen sulfide for a day, weighted by the contributions of the wind directions (from the south and the east) of both Parkway and Liberty monitoring stations.
+              The formula for each hourly measurement is:
+            </p>
+            <img src="http://latex.codecogs.com/svg.latex?C\cdot(3\sin\theta_1+3\sin\theta_2-\cos\theta_1-\cos\theta_2)">
+            <p class="text">
+              where <img src="http://latex.codecogs.com/svg.latex?C" style="vertical-align: -0.1em;"> is the concentration of hydrogen sulfide in parts per billion (ppb) of the Liberty monitoring station,
+              <img src="http://latex.codecogs.com/svg.latex?\theta_1" style="vertical-align: -0.2em;"> is the wind direction of the Liberty monitoring station,
+              and <img src="http://latex.codecogs.com/svg.latex?\theta_2" style="vertical-align: -0.2em;"> is the wind direction of the Parkway monitoring station.
+              A darker color in the second figure means that the impact of hydrogen sulfide is likely to be higher in the city.
+              The correlation between these two metrics is 0.64 in 2018 and 0.65 in 2017.
             </p>
             <p class="text text-center analysis-graph-title">
               Sum of Smell Ratings by Date (2017)
             </p>
             <img class="image center" src="img/smell_heatmap_2017.png" style="max-width: 810px;">
             <p class="text text-center analysis-graph-title">
-                Maximum Concentration of Hydrogen Sulfide by Date (2017)
+              Maximum of Weighted Hydrogen Sulfide Concentration by Date (2017)
             </p>
             <img class="image center" src="img/esdr_heatmap_2017.png" style="max-width: 800px;">
           </div>

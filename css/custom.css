@@ -2,11 +2,6 @@
  * Your custom CSS file
  *************************************************************************/
 
-.analysis-graph-title {
-  font-size: 22px;
-  margin-bottom: -5px;
-}
-
 #download-button-container {
   display: none;
 }
