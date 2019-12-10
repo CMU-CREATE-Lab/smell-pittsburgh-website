@@ -78,7 +78,7 @@
             <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Time</h2>
             <hr>
             <p class="text">
-              To investigate the concentration of smell reports across time, we compute the average number of smell reports per day, aggregated by hour of day, day of week, and month.
+              To investigate the concentration of smell reports across time, we compute the average number of smell reports per day, aggregated by hour of day and day of week.
               The following figures show that our users usually submit reports in the morning and rarely at nighttime.
               Also, weekdays have more smell reports than weekends.
             </p>
@@ -86,18 +86,31 @@
               Average number of reports per day (2018)
             </p>
             <img class="image center" src="img/smell_dh_2018.png" style="max-width: 650px;">
-            <img class="image center" src="img/smell_mh_2018.png" style="max-width: 650px;">
             <p class="text">
               The patterns in 2017 and 2018 are similar.
-              One key difference is that the reports on 2018 are more evenly distributed, while the reports on 2017 are concentrated on Tuesday, Wednesday, and Thursday morning.
+              One key difference is that the reports in 2018 are more evenly distributed, while the reports in 2017 are concentrated on Tuesday, Wednesday, and Thursday morning.
             </p>
             <p class="text text-center analysis-graph-title">
               Average number of reports per day (2017)
             </p>
             <img class="image center" src="img/smell_dh_2017.png" style="max-width: 650px;">
+            <p class="text">
+              Moreover, we compute the average number of smell reports per day, aggregated by hour of day and month.
+              When comparing with the previous graph, the x-axis is the same, and we replace the y-axis with months.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Average number of reports per day (2018)
+            </p>
+            <img class="image center" src="img/smell_mh_2018.png" style="max-width: 650px;">
+            <p class="text">
+              One key difference is that smell reports were concentrated in May and June morning in 2018, while the reports in 2017 are concentrated in July, August, and October.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Average number of reports per day (2017)
+            </p>
             <img class="image center" src="img/smell_mh_2017.png" style="max-width: 650px;">
             <!----------------------------------------------------------------------------------->
-            <h2 class="add-top-margin">Distribution of Smell Reports by Geographical Region</h2>
+            <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Geographical Region</h2>
             <hr>
             <p class="text">
               The following interactive map shows the distribution of smell reports by zipcodes for 2018.
@@ -137,6 +150,43 @@
               Content analysis (2017)
             </p>
             <img class="image center" src="img/smell_content_2017.png" style="max-width: 800px;">
+            <!----------------------------------------------------------------------------------->
+            <h2 class="add-top-margin">Relationships between Smell Reports and Pollutants</h2>
+            <hr>
+            <p class="text">
+                The result discovered in the content analysis and the information obtained from informal community meetings suggested that hydrogen sulfide might be the primary source of odor pollution.
+                In the research paper, we have used statistical methods to select a subset of smell reports and analyze the relationship between these reports with hydrogen sulfide.
+                In the bottom figure, we visualize the <a href="https://link.springer.com/content/pdf/10.1007%2FBF00116251.pdf" target="_blank">decision tree</a> (i.e., the statistical model) and the pattern.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Pollution Pattern Identified by Statistical Analysis (10/31/2016 to 9/27/2018)
+            </p>
+            <img class="image center" src="img/smell_decision_tree.png" style="max-width: 810px;">
+            <p class="text">
+                The decision tree is analogous to how a medical doctor diagnoses patients.
+                The top level of the tree shows the most important predictor, which is the interaction between the wind directions at Parkway monitoring station and the hydrogen sulfide concentration at the Liberty monitoring station.
+                The Allegany County Health Department operates these stations.
+                Based on this finding, we further investigate such relationships on a daily scale.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Sum of Smell Ratings by Date (2018)
+            </p>
+            <img class="image center" src="img/smell_heatmap_2018.png" style="max-width: 810px;">
+            <p class="text text-center analysis-graph-title">
+                Maximum Concentration of Hydrogen Sulfide by Date (2018)
+            </p>
+            <img class="image center" src="img/esdr_heatmap_2018.png" style="max-width: 800px;">
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Sum of Smell Ratings by Date (2017)
+            </p>
+            <img class="image center" src="img/smell_heatmap_2017.png" style="max-width: 810px;">
+            <p class="text text-center analysis-graph-title">
+                Maximum Concentration of Hydrogen Sulfide by Date (2017)
+            </p>
+            <img class="image center" src="img/esdr_heatmap_2017.png" style="max-width: 800px;">
           </div>
         </div>
       </div>
