@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/postmessage.js"></script>
+  <script src="js/visualization.js"></script>
   <style>
     .menu-visualization {
       color: rgb(255, 255, 255) !important;
@@ -24,7 +26,8 @@
 <body class="force-no-scroll">
   <div class="menu-container"></div>
   <div class="iframe-container">
-    <iframe class="iframe" src="https://api.smellpittsburgh.org/visualization"></iframe>
+    <!-- The src of the iframe is set in the js/visualization.js file -->
+    <iframe class="iframe" id="viz-iframe" src=""></iframe>
   </div>
 </body>
 <script>
