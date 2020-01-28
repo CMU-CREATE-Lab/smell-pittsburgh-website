@@ -55,12 +55,12 @@
             <h2>Data Analysis and Research</h2>
             <hr>
             <p class="text">
-              In the Pittsburgh region, using the smell reports and the air quality data from local agency monitoring stations, we developed a statistical model to predict upcoming smell events and send push notifications to inform communities.
+              Using Smell PGH reports and air quality data from local agency monitoring stations, we developed a statistical model to predict upcoming smell events and send push notifications to inform communities.
               The dataset and the code are <a href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-prediction" target="_blank">publicly available on GitHub</a>.
               Our analysis indicated that smell events in Pittsburgh are related to the joint effect of wind directions and hydrogen sulfide readings.
               This research shows that engaging residents in documenting their experiences with pollution odors can help identify local air pollution patterns.
-              To learn more, check our research paper below.
-              A preprint of the paper can be downloaded <a href="https://arxiv.org/pdf/1810.11143.pdf" target="_blank">here</a>.
+              To learn more, a preprint of our research paper can be downloaded <a href="https://arxiv.org/pdf/1810.11143.pdf" target="_blank">here</a>.
+              The full citation of the research is shown below:
             </p>
             <p class="text">
               <i>Yen-Chia Hsu, Jennifer Cross, Paul Dille, Michael Tasota, Beatrice Dias, Randy Sargent, Ting-Hao (Kenneth) Huang, and Illah Nourbakhsh. 2019. Smell Pittsburgh: community-empowered mobile smell reporting system. In Proceedings of the 24th International Conference on Intelligent User Interfaces (IUI '19). ACM, New York, NY, USA, 65-79. DOI: <a href="https://doi.org/10.1145/3301275.3302293" target="_blank">https://doi.org/10.1145/3301275.3302293</a></i>
@@ -69,19 +69,19 @@
             <h2 class="add-top-margin">Distribution of Smell Reports and Users by Month</h2>
             <hr>
             <p class="text">
-              Smell Pittsburgh was launched on November 2016.
-              To understand user engagement over time, we aggregate the number of smell reports and unique users by month, as shown in the following figures.
+              Smell Pittsburgh was launched in September 2016.
+              To understand user engagement over time, we aggregate the number of smell reports and unique users by month (for 2017, 2018, and 2019).
               We estimate the number of unique users by combining the results from Google Analytics and our customized tracker in the system.
+              In general, user engagement in 2019 (17,974 reports, 6,406 users) was significantly higher than in 2018 (9,195 reports, 2,645 users) and in 2017 (8,112 reports, 2,237 users).
             </p>
+            <p class="text text-center analysis-graph-title">
+              Year 2019
+            </p>
+            <a class="image center" style="max-width: 650px;" href="img/all_smell_2019.png"><img src="img/all_smell_2019.png"></a>
             <p class="text text-center analysis-graph-title">
               Year 2018
             </p>
             <a class="image center" style="max-width: 650px;" href="img/all_smell_2018.png"><img src="img/all_smell_2018.png"></a>
-            <p class="text">
-              There are no apparent similarities among the statistics in 2017 and 2018.
-              In general, user engagement in 2018 (9,193 reports, 2,645 users) is increased than in 2017 (8,112 reports, 2,237 users).
-              The system attracted more users in 2018, and they also submitted more reports when compared with the data in 2017.
-            </p>
             <p class="text text-center analysis-graph-title">
               Year 2017
             </p>
@@ -91,32 +91,35 @@
             <hr>
             <p class="text">
               To investigate the concentration of smell reports across time, we compute the average number of smell reports per day, aggregated by hour of day and day of week.
-              The following figures show that our users usually submit reports in the morning and rarely at nighttime.
-              Also, weekdays have more smell reports than weekends.
+              The following figures show that most reports are submitted during morning hours, and rarely at nighttime.
+              Additionally, more smell reports are received during weekdays compared to weekends.
+              The distribution of reports per day were similar in 2017 and 2018.
+              However, reports in 2018 were more evenly distributed, while the 2017 reports were concentrated on Tuesday, Wednesday, and Thursday mornings.
             </p>
+            <p class="text text-center analysis-graph-title">
+              Average number of reports per day (2019)
+            </p>
+            <a class="image center" style="max-width: 650px;" href="img/smell_dh_2019.png"><img src="img/smell_dh_2019.png"></a>
             <p class="text text-center analysis-graph-title">
               Average number of reports per day (2018)
             </p>
             <a class="image center" style="max-width: 650px;" href="img/smell_dh_2018.png"><img src="img/smell_dh_2018.png"></a>
-            <p class="text">
-              The patterns in 2017 and 2018 are similar.
-              One key difference is that the reports in 2018 are more evenly distributed, while the reports in 2017 are concentrated on Tuesday, Wednesday, and Thursday morning.
-            </p>
             <p class="text text-center analysis-graph-title">
               Average number of reports per day (2017)
             </p>
             <a class="image center" style="max-width: 650px;" href="img/smell_dh_2017.png"><img src="img/smell_dh_2017.png"></a>
             <p class="text">
               Moreover, we compute the average number of smell reports per day, aggregated by hour of day and month.
-              When comparing with the previous graph, the x-axis is the same, and we replace the y-axis with months.
+              2018 smell reports were more frequent in the mornings in May and June, while the reports from 2017 were concentrated in July, August, and October.
             </p>
+            <p class="text text-center analysis-graph-title">
+              Average number of reports per day (2019)
+            </p>
+            <a class="image center" style="max-width: 650px;" href="img/smell_mh_2019.png"><img src="img/smell_mh_2019.png"></a>
             <p class="text text-center analysis-graph-title">
               Average number of reports per day (2018)
             </p>
             <a class="image center" style="max-width: 650px;" href="img/smell_mh_2018.png"><img src="img/smell_mh_2018.png"></a>
-            <p class="text">
-              One key difference is that smell reports were concentrated in May and June morning in 2018, while the reports in 2017 are concentrated in July, August, and October.
-            </p>
             <p class="text text-center analysis-graph-title">
               Average number of reports per day (2017)
             </p>
@@ -125,61 +128,85 @@
             <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Geographical Region</h2>
             <hr>
             <p class="text">
-              The following interactive map shows the distribution of smell reports by zipcodes for 2018.
-              The color legend indicates the mapping between color and the number of smell reports.
-              A darker color means more reports in an area.
-              Notice that this map indicates citizen engagement but does not represent the severity of pollution.
+              The following interactive maps show the distribution of smell reports by Pittsburgh area zipcodes for 2017, 2018, and 2019.
+              A darker color indicates more reports in an area.
+              Note that this map indicates citizen engagement with the Smell PGH app, but does not necessarily represent the severity of pollution.
+              In general, citizen engagement is increased over the three years, especially from 2018 to 2019.
             </p>
+            <p class="text text-center analysis-graph-title">
+              Number of reports by region (2019)
+            </p>
+            <iframe class="iframe-in-body" src="smell_map.html?year=2019"></iframe>
             <p class="text text-center analysis-graph-title">
               Number of reports by region (2018)
             </p>
             <iframe class="iframe-in-body" src="smell_map.html?year=2018"></iframe>
-            <p class="text">
-              The following map shows the distribution of smell reports by zipcodes for 2017.
-              One major difference is that the number of reports from zipcode 15218 in 2018 are increased significantly (almost a factor of two) when compared to the data in 2017.
-            </p>
             <p class="text text-center analysis-graph-title">
               Number of reports by region (2017)
             </p>
             <iframe class="iframe-in-body" src="smell_map.html?year=2017"></iframe>
             <!----------------------------------------------------------------------------------->
-            <h2 class="add-top-margin">What People Said in Smell Reports</h2>
+            <h2 class="add-top-margin">Content Analysis of Smell Reports</h2>
             <hr>
             <p class="text">
               To identify critical topics in citizen-contributed smell reports, we analyzed the frequency of words (unigram) and phrases (bigram) in the text fields.
-              We remove stop words and group similar words with different forms (lemmatization).
-              The following figures show that high-frequency words and phrases mostly described industrial pollution odors and symptoms of air pollution exposure, especially hydrogen sulfide that has rotten egg smell and can cause a headache, dizziness, eye irritation, sore throat, cough, nausea, and shortness of breath.
+              The following figures show that the majority of user comments described industrial pollution odors and symptoms related to air pollution exposure.
+              Odor descriptions and symptoms were frequently linked to hydrogen sulfide, which has a "rotten egg" smell and is known to cause symptoms of headaches, dizziness, eye irritation, sore throat, cough, nausea, and shortness of breath
+              (<a href="https://doi.org/10.1146/annurev.pa.32.040192.000545" target="_blank">Reiffenstein et al., 1992</a>; <a href="https://doi.org/10.1177/1091581810384882" target="_blank">Guidotti, 2010</a>).
             </p>
+            <p class="text text-center analysis-graph-title">
+              Content analysis (2019)
+            </p>
+            <a class="image center" style="max-width: 800px;" href="img/smell_content_2019.png"><img src="img/smell_content_2019.png"></a>
             <p class="text text-center analysis-graph-title">
               Content analysis (2018)
             </p>
             <a class="image center" style="max-width: 800px;" href="img/smell_content_2018.png"><img src="img/smell_content_2018.png"></a>
-            <p class="text">
-              The major trends in the content of the smell reports are mostly the same in 2017 and 2018.
-              One difference is that there are much more reports that describe rotten egg smell and sore throat symptom in 2018.
-            </p>
             <p class="text text-center analysis-graph-title">
               Content analysis (2017)
             </p>
             <a class="image center" style="max-width: 800px;" href="img/smell_content_2017.png"><img src="img/smell_content_2017.png"></a>
             <!----------------------------------------------------------------------------------->
-            <h2 class="add-top-margin">Relationships between Smell Reports and Pollutants</h2>
+            <h2 class="add-top-margin">Relationship between Smell Reports and Pollutants</h2>
             <hr>
             <p class="text">
-              The result discovered in the content analysis and the information obtained from informal community meetings suggested that hydrogen sulfide might be the primary source of odor pollution.
-              In the research paper, we have used statistical methods to select a subset of smell reports and analyze the relationship between these reports and hydrogen sulfide concentration.
-              In the bottom figure, we visualize a part of the <a href="https://link.springer.com/content/pdf/10.1007%2FBF00116251.pdf" target="_blank">decision tree</a> (i.e., the statistical model) and the pattern.
+              Comments from Smell PGH users and Pittsburgh community members suggested that hydrogen sulfide might be the primary source of pollution odors in the area.
+              We used statistical methods (described in the figure below) to analyze the relationship between a subset of smell reports and hydrogen sulfide concentrations, as measured by county monitors in the region.
+              Note that this identified relationship does not imply causation.
             </p>
             <p class="text text-center analysis-graph-title">
               Pollution Pattern Identified by Statistical Analysis (10/31/2016 to 9/27/2018)
             </p>
             <a class="image center" style="max-width: 810px;" href="img/smell_decision_tree.png"><img src="img/smell_decision_tree.png"></a>
             <p class="text">
-              The decision tree is analogous to how a medical doctor diagnoses patients.
-              The top level of the tree shows the most important predictor, which is the interaction between the wind directions (at Parkway monitoring station) and the hydrogen sulfide concentration (at the Liberty monitoring station).
-              The Allegany County Health Department operates these monitoring stations.
-              Based on this finding, we further investigate such relationships on a daily scale.
+              The decision tree (<a href="https://doi.org/10.1007/BF00116251" target="_blank">Quinlan, 1986</a>) depicted above is analogous to how a medical doctor may diagnose a patient.
+              The top level of the tree shows the most influential predictor, which is the interaction between wind direction at the Parkway monitoring station and hydrogen sulfide concentration at the Liberty monitoring station.
+              The Allegany County Health Department operates these monitoring stations. Based on this finding, we investigated this relationship further, by date.
             </p>
+            <p class="text">
+              We compare two metrics that are related to smell reports and data from county air quality monitors, respectively.
+              The first metric shows the sum of smell ratings for each day, excluding reports with ratings that are less than three.
+              A darker color indicates a larger volume of smell reports on that date.
+              The second metric shows the maximum concentration of hydrogen sulfide per day, weighted by the contributions of the wind directions (from the south and the east) at both the Parkway and Liberty monitoring stations.
+              The formula for each hourly measurement is:
+            </p>
+            <img src="http://latex.codecogs.com/svg.latex?C\cdot(3\sin\theta_1+3\sin\theta_2-\cos\theta_1-\cos\theta_2)">
+            <p class="text">
+              where <img src="http://latex.codecogs.com/svg.latex?C" style="vertical-align: -0.1em;"> represents the concentration of hydrogen sulfide in parts per billion (ppb) of the Liberty monitoring station,
+              <img src="http://latex.codecogs.com/svg.latex?\theta_1" style="vertical-align: -0.2em;"> is the wind direction at the Liberty monitoring station,
+              and <img src="http://latex.codecogs.com/svg.latex?\theta_2" style="vertical-align: -0.2em;"> is the wind direction at the Parkway monitoring station.
+              A darker color in the second metric indicates a larger concentration of hydrogen sulfide in the area.
+              The correlation between these two metrics (the sum of smell ratings and the maximum weighted concentration of hydrogen sulfide per day) is 0.59 in 2019, 0.64 in 2018, and 0.65 in 2017.
+              This indicates that hydrogen sulfide was a significant driver of smell reports in these three years.
+            </p>
+            <p class="text text-center analysis-graph-title">
+              Sum of Smell Ratings by Date (2019)
+            </p>
+            <a class="image center" style="max-width: 810px;" href="img/smell_heatmap_2019.png"><img src="img/smell_heatmap_2019.png"></a>
+            <p class="text text-center analysis-graph-title">
+              Maximum of Weighted Hydrogen Sulfide Concentration by Date (2019)
+            </p>
+            <a class="image center" style="max-width: 800px;" href="img/esdr_heatmap_2019.png"><img src="img/esdr_heatmap_2019.png"></a>
             <p class="text text-center analysis-graph-title">
               Sum of Smell Ratings by Date (2018)
             </p>
@@ -188,21 +215,6 @@
               Maximum of Weighted Hydrogen Sulfide Concentration by Date (2018)
             </p>
             <a class="image center" style="max-width: 800px;" href="img/esdr_heatmap_2018.png"><img src="img/esdr_heatmap_2018.png"></a>
-            <p class="text">
-              In the above two figures, we compare two metrics that are related to the smell reports and the air quality sensing data, respectively.
-              The first figure shows the sum of ratings in the smell reports for a day, excluding the reports with ratings that are less than three.
-              A darker color means that more people reported odor issues in the city.
-              The second figure shows the maximum concentration of hydrogen sulfide for a day, weighted by the contributions of the wind directions (from the south and the east) of both Parkway and Liberty monitoring stations.
-              The formula for each hourly measurement is:
-            </p>
-            <img src="http://latex.codecogs.com/svg.latex?C\cdot(3\sin\theta_1+3\sin\theta_2-\cos\theta_1-\cos\theta_2)">
-            <p class="text">
-              where <img src="http://latex.codecogs.com/svg.latex?C" style="vertical-align: -0.1em;"> is the concentration of hydrogen sulfide in parts per billion (ppb) of the Liberty monitoring station,
-              <img src="http://latex.codecogs.com/svg.latex?\theta_1" style="vertical-align: -0.2em;"> is the wind direction of the Liberty monitoring station,
-              and <img src="http://latex.codecogs.com/svg.latex?\theta_2" style="vertical-align: -0.2em;"> is the wind direction of the Parkway monitoring station.
-              A darker color in the second figure means that the impact of hydrogen sulfide is likely to be higher in the city.
-              The correlation between these two metrics is 0.64 in 2018 and 0.65 in 2017.
-            </p>
             <p class="text text-center analysis-graph-title">
               Sum of Smell Ratings by Date (2017)
             </p>

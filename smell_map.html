@@ -76,7 +76,7 @@
     function loadData() {
       var data = {};
       var query_vars = getQueryParas();
-      var available_years = ["2017", "2018"];
+      var available_years = ["2017", "2018", "2019"];
       var year = available_years[0];
       if ("year" in query_vars) {
         var desired_year = query_vars["year"];
@@ -91,6 +91,9 @@
       } else if (year == 2018) {
         //path = "http://api.smellpittsburgh.org/api/v2/smell_reports?city_ids=1&client_ids=1,3&group_by=zipcode&aggregate=true&start_time=1514782800&end_time=1546318800";
         path = "lib/geo-heatmap/zipcode_metadata_2018.json"
+      } else if (year == 2019) {
+        //path = "http://api.smellpittsburgh.org/api/v2/smell_reports?city_ids=1&client_ids=1,3&group_by=zipcode&aggregate=true&start_time=1546318800&end_time=1577854800";
+        path = "lib/geo-heatmap/zipcode_metadata_2019.json"
       }
       // Start loading data simultaneously
       $.when(
@@ -156,7 +159,7 @@
       geo_heatmap = new edaplotjs.GeoHeatmap("#map-container", settings);
       color_legned = new edaplotjs.ColorScaleLegend("#color-legend-container", {
         color_scale: color_scale,
-        top_text: "1000",
+        top_text: ">1000",
         bottom_text: "0"
       });
     }
