@@ -32,16 +32,25 @@
     }
 
     .image,
-    .custom-table,
-    .iframe-in-body {
-      margin-top: 5px;
+    .custom-table {
+      margin-top: 15px;
       margin-bottom: 15px;
+    }
+
+    .custom-tab .image,
+    .custom-tab .custom-table {
+      margin-top: 5px;
+      margin-bottom: 0;
     }
 
     .analysis-graph-title {
       font-size: 20px;
       margin-bottom: 0;
       margin-top: 15px;
+    }
+
+    .custom-tab .analysis-graph-title:first-child {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -470,11 +479,9 @@
             <hr>
             <p class="text">
               Comments from Smell PGH users and Pittsburgh community members suggested that hydrogen sulfide might be the primary source of pollution odors in the area.
-              We used statistical methods (described in the figure below) to analyze the relationship between a subset of smell reports and hydrogen sulfide concentrations, as measured by county monitors in the region.
+              We used statistical methods to analyze the relationship between a subset of smell reports and hydrogen sulfide concentrations, as measured by county monitors in the region.
+              The figure below shows the result for 23 months of data (10/31/2016 to 9/27/2018).
               Note that this identified relationship does not imply causation.
-            </p>
-            <p class="text text-center analysis-graph-title">
-              Pollution pattern analysis (10/31/2016 to 9/27/2018)
             </p>
             <a class="image center" style="max-width: 810px;" href="img/smell_decision_tree.png"><img src="img/smell_decision_tree.png"></a>
             <p class="text">
