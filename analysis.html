@@ -381,6 +381,59 @@
                 </div>
               </div>
             </div>
+            <p class="text">
+              Our analysis of two metrics indicates that user engagement is highly related to the daily air quality.
+              The first metric shows the number of unique users for each day.
+              A darker color indicates a larger volume of unique users on that date.
+              The second metric shows the weighted air quality index (AQI) from three pollutants: particulate matter (PM), carbon monoxide (CO), and sulfur dioxide (SO<sub>2</sub>).
+              We compute the weighted AQI based on the sensor readings obtained from monitoring stations in Pittsburgh operated by the Allegheny County Health Department.
+              The formula is:
+            </p>
+            <img class="image center" src="http://latex.codecogs.com/svg.latex?f(\mathrm{PM})+3\cdot{f(\mathrm{CO})}+f(\mathrm{SO_2})" style="max-width: 200px;">
+            <p class="text">
+              where <img src="http://latex.codecogs.com/svg.latex?f" style="vertical-align: -0.2em;"> is the function that computes the AQI based on <a target="_blank" href="https://www3.epa.gov/airnow/aqi_brochure_02_14.pdf">the EPA guideline</a>,
+              and <img src="http://latex.codecogs.com/svg.latex?\mathrm{PM}" style="vertical-align: -0.05em;"> involves both PM<sub>2.5</sub> and PM<sub>10</sub>.
+              A darker color in the second metric indicates a higher weighted AQI.
+              The correlation between these two metrics (the number of unique users and the weighted air quality index per day) is 0.62 in 2019, 0.61 in 2018, and 0.55 in 2017.
+              This shows that air quality was a significant driver to engage our users in these three years.
+            </p>
+            <div class="custom-tab">
+              <div class="custom-tab-menu center">
+                <a class="custom-tab-menu-item active" data-content="2019">2019</a>
+                <a class="custom-tab-menu-item" data-content="2018">2018</a>
+                <a class="custom-tab-menu-item" data-content="2017">2017</a>
+              </div>
+              <div class="custom-tab-content" data-content="2019">
+                <p class="text text-center analysis-graph-title">
+                  Number of unique users by date (2019)
+                </p>
+                <a class="image center" style="max-width: 810px;" href="img/user_heatmap_2019.png"><img src="img/user_heatmap_2019.png"></a>
+                <p class="text text-center analysis-graph-title">
+                  Weighted air quality index by date (2019)
+                </p>
+                <a class="image center" style="max-width: 800px;" href="img/aqi_heatmap_2019.png"><img src="img/aqi_heatmap_2019.png"></a>
+              </div>
+              <div class="custom-tab-content" data-content="2018">
+                <p class="text text-center analysis-graph-title">
+                  Number of unique users by date (2018)
+                </p>
+                <a class="image center" style="max-width: 810px;" href="img/user_heatmap_2018.png"><img src="img/user_heatmap_2018.png"></a>
+                <p class="text text-center analysis-graph-title">
+                  Weighted air quality index by date (2018)
+                </p>
+                <a class="image center" style="max-width: 800px;" href="img/aqi_heatmap_2018.png"><img src="img/aqi_heatmap_2018.png"></a>
+              </div>
+              <div class="custom-tab-content" data-content="2017">
+                <p class="text text-center analysis-graph-title">
+                  Number of unique users by date (2017)
+                </p>
+                <a class="image center" style="max-width: 810px;" href="img/user_heatmap_2017.png"><img src="img/user_heatmap_2017.png"></a>
+                <p class="text text-center analysis-graph-title">
+                  Weighted air quality index by date (2017)
+                </p>
+                <a class="image center" style="max-width: 800px;" href="img/aqi_heatmap_2017.png"><img src="img/aqi_heatmap_2017.png"></a>
+              </div>
+            </div>
             <!----------------------------------------------------------------------------------->
             <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Time</h2>
             <hr>
