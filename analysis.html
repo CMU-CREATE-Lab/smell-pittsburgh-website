@@ -49,11 +49,42 @@
             <h2>Data Analysis and Research</h2>
             <hr>
             <p class="text">
-              Using Smell PGH reports and air quality data from local agency monitoring stations, we developed a statistical model to predict upcoming smell events and send push notifications to inform communities.
-              The dataset and the code are <a href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-prediction" target="_blank">publicly available on GitHub</a>.
+              The Smell Pittsburgh (Smell PGH) app has been active since September 2016.
+              Over the past 3+ years, residents have utilized Smell PGH to submit over 40 thousand reports (as of May 2020) related to pollution odors.
+              These data offer multiple accounts of the human impacts of air pollution and provide insights into the air quality landscape of our region.
+              Collectively, the Pittsburgh community has engaged in documenting conditions of the air and has made connections between air quality and our health.
+              To highlight patterns and insights in the thousands of Smell PGH reports, this page outlines data analyses curated by Dr. Yen-Chia Hsu from the CREATE Lab.
+              These assessments are based on three full years of Smell PGH data from 2017, 2018, and 2019.
+              In the sections below, we examine these data from several different aspects in order to understand:
+            </p>
+            <ul>
+              <li>Levels and types of report submissions and public engagement</li>
+              <li>How reports are distributed over time and neighborhood</li>
+              <li>Patterns in the content of reports</li>
+              <li>Links between smell reports and pollutants in the air</li>
+            </ul>
+            <h2>Summary of Findings</h2>
+            <hr>
+            <p class="text">
+              Use of the app in 2019 (17,974 reports, 6,406 users) was significantly higher than in 2018 (9,195 reports, 2,645 users) and in 2017 (8,112 reports, 2,237 users).
+              Most residents who use the Smell PGH app were actively engaged, submitting more than one report in a given week and/or month.
+              When looking at the Pittsburgh region, we saw greater engagement with the app across local zip codes over the three years spanning 2017 through 2019.
+              Local air quality at a given time somewhat affected the level of engagement with Smell PGH, with more users interacting with the app during poor air quality conditions.
+              The Smell PGH map, which visualizes smell reports across our region as well as local air quality data, was another significant aspect of engagement, with over 80% of app users interacting with the map.
+            </p>
+            <p class="text">
+              When looking at overall submissions, most reports (over 70% in all three years) rate the pollution odor 3 or worse, on a scale of 1 to 5 (1 being just fine, and 5 being as bad as it gets).
+              Smell PGH reports were primarily submitted during morning hours, and rarely at nighttime, and most user comments described industrial pollution odors and symptoms related to air pollution exposure.
+              Odor descriptions and symptoms were frequently linked to hydrogen sulfide, which has a "rotten egg" smell and is known to cause symptoms of headaches, dizziness, eye irritation, sore throat, cough, nausea, and shortness of breath
+              (<a href="https://doi.org/10.1146/annurev.pa.32.040192.000545" target="_blank">Reiffenstein et al., 1992</a>; <a href="https://doi.org/10.1177/1091581810384882" target="_blank">Guidotti, 2010</a>).
+              These narratives align with our finding that hydrogen sulfide was a significant driver of smell reports in the three years from 2017 through 2019.
+            </p>
+            <p class="text">
+              Using Smell PGH reports and air quality data from local monitoring stations, we developed a statistical model to predict upcoming smell events and send push notifications to inform communities.
               Our analysis indicated that odor pollution events in the Greater Pittsburgh region are related to the joint effect of wind directions and hydrogen sulfide readings.
               This research shows that engaging residents in documenting their experiences with pollution odors can help identify local air pollution patterns.
-              To learn more, a preprint of our research paper can be downloaded <a href="https://arxiv.org/pdf/1810.11143.pdf" target="_blank">here</a>.
+              For a more indepth report, please refer to our research publication, which can be downloaded <a href="https://arxiv.org/pdf/1810.11143.pdf" target="_blank">here</a>.
+              The dataset and code utilized in this paper are <a href="https://github.com/CMU-CREATE-Lab/smell-pittsburgh-prediction" target="_blank">publicly available on GitHub</a>.
               The full citation of the research is shown below:
             </p>
             <p class="text">
@@ -77,8 +108,8 @@
             <hr>
             <p class="text">
               Smell Pittsburgh was launched in September 2016.
-              To understand user engagement over time, we aggregate the number of smell reports and unique users by month (for 2017, 2018, and 2019).
-              We estimate the number of unique users by combining the results from Google Analytics and our customized tracker in the system.
+              To understand user engagement over time, we aggregated the number of smell reports and unique users by month (for 2017, 2018, and 2019).
+              We estimated the number of unique users by combining the results from Google Analytics and our customized tracker in the system.
               In general, user engagement in 2019 (17,974 reports, 6,406 users) was significantly higher than in 2018 (9,195 reports, 2,645 users) and in 2017 (8,112 reports, 2,237 users).
             </p>
             <div class="custom-tab">
@@ -107,10 +138,10 @@
               </div>
             </div>
             <p class="text">
-              Additionally, we compute the number of active users who have submitted smell reports within the last 7 and 30 days as engagement indicators.
-              For example, if a user submits a report on September 5, we check if the user has submitted another report within the last 30 days.
-              If yes, we add the number of active users in September by one.
-              The result shows that a large portion of our users is active.
+              Also, for each report submitted, we assessed whether that same user logged another report within the previous 7 or 30 days.
+              We then computed the total number of unique users who submitted a smell report in a given month and also submitted an additional report 7 or 30 days before that time.
+              This served as an additional metric for gauging user engagement since it offers insight into the proportion of users who submit smell reports at a higher frequency.
+              The results show that a large portion of our users was active.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -138,8 +169,8 @@
               </div>
             </div>
             <p class="text">
-              The following table show the distribution of ratings in the smell reports for the year 2017, 2018, and 2019.
-              Our users tend to report bad odors with ratings larger than two, especially for 2019.
+              The following table shows the distribution of smell report ratings for the years 2017, 2018, and 2019.
+              Most reports submitted were rated higher than two, especially in 2019.
             </p>
             <div class="custom-table-container center">
               <table class="custom-table">
@@ -197,9 +228,9 @@
             <h2 class="add-top-margin">Analysis of User Engagement</h2>
             <hr>
             <p class="text">
-              We compute the number of unique users who submitted at least one smell report and used the map at least once, respectively.
-              The number of interaction events with the map for each user is tracked anonymously using Google Analytics.
-              This analysis shows that over 50% of our users contribute smell data, and over 80% of our users interacted with the map.
+              We computed the number of unique users who submitted at least one smell report and used the map at least once, respectively.
+              The number of interaction events with the map for each user was tracked anonymously using Google Analytics.
+              This analysis shows that over 50% of our users contributed data, and over 80% of our users interacted with the map.
             </p>
             <div class="custom-table-container center">
               <table class="custom-table">
@@ -236,8 +267,7 @@
               </table>
             </div>
             <p class="text">
-              The bottom figure shows the distribution of unique users who submitted at least one smell reports, aggregated by the total number of submitted reports in a year.
-              The x-axis shows the bins, and the y-axis shows the log scale of the number of users.
+              The figure below shows the distribution of unique users who submitted at least one smell report, aggregated by the total number of submitted reports in a year.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -265,8 +295,7 @@
               </div>
             </div>
             <p class="text">
-              The bottom figure shows the distribution of unique users who interacted with the map at least once, aggregated by the total number of interaction events in a year.
-              The x-axis shows the bins, and the y-axis shows the log scale of the number of users.
+              The figure below shows the distribution of unique users who interacted with the map at least once, aggregated by the total number of interaction events in a year.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -294,15 +323,14 @@
               </div>
             </div>
             <p class="text">
-              Our analysis of two metrics shows that user engagement is related to air quality.
-              The first metric means the number of unique users for each day.
-              A darker color indicates a larger volume of unique users on that date.
-              The second metric shows the air quality index (AQI) from four pollutants: ozone (O<sub>3</sub>), particulate matter (PM<sub>2.5</sub> and PM<sub>10</sub>), carbon monoxide (CO), and sulfur dioxide (SO<sub>2</sub>).
-              The concentrations of the pollutants are obtained from monitoring stations in Pittsburgh operated by the Allegheny County Health Department.
-              We compute the AQI based on <a target="_blank" href="https://nepis.epa.gov/Exe/ZyPDF.cgi/P1006KOQ.PDF?Dockey=P1006KOQ.PDF">the EPA guideline</a>.
-              A darker color in the second metric indicates a higher AQI.
-              The correlation between these two metrics (the number of unique users and the AQI) is 0.50 in 2019, 0.54 in 2018, and 0.44 in 2017.
-              This indicates that air quality was a moderate important driver to engage our users.
+              We also assessed the number of unique users for each day.
+              In the figures below, a darker color indicates a larger volume of unique users on that date.
+              The second figure below shows the air quality index (AQI) from four pollutants: ozone (O<sub>3</sub>), particulate matter (PM<sub>2.5</sub> and PM<sub>10</sub>), carbon monoxide (CO), and sulfur dioxide (SO<sub>2</sub>).
+              The concentrations of the pollutants were obtained from monitoring stations in Pittsburgh operated by the Allegheny County Health Department.
+              We computed the AQI based on the <a target="_blank" href="https://nepis.epa.gov/Exe/ZyPDF.cgi/P1006KOQ.PDF?Dockey=P1006KOQ.PDF">the EPA guidelines</a>.
+              A darker color in the second figure indicates a higher AQI.
+              The correlation between these two metrics (number of unique users and AQI) was 0.50 in 2019, 0.54 in 2018, and 0.44 in 2017.
+              This indicates that air quality was a moderately important driver of user engagement.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -345,9 +373,9 @@
             <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Time</h2>
             <hr>
             <p class="text">
-              To investigate the concentration of smell reports across time, we compute the average number of smell reports per day, aggregated by hour of day and day of week.
-              The following figures show that most reports are submitted during morning hours, and rarely at nighttime.
-              For 2017 and 2018, more smell reports are received during weekdays compared to weekends.
+              To investigate the concentration of smell reports across time, we computed the average number of smell reports per day, aggregated by hour of day and day of week.
+              The following figures show that most reports were submitted during morning hours, and rarely at nighttime.
+              For 2017 and 2018, more smell reports were received during weekdays compared to weekends.
               Reports in 2018 and 2019 were more evenly distributed, while the 2017 reports were concentrated on Wednesday mornings.
             </p>
             <div class="custom-tab">
@@ -376,8 +404,8 @@
               </div>
             </div>
             <p class="text">
-              Moreover, we compute the average number of smell reports per day, aggregated by hour of day and month.
-              For the year 2017, 2018, and 2019, the reports were concentrated in different months, which shows different pollution and engagement patterns.
+              Moreover, we computed the average number of smell reports per day, aggregated by hour of day and month.
+              Reports in 2017, 2018, and 2019 were disparately distributed across the different months, which indicates different pollution and engagement patterns.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -408,10 +436,10 @@
             <h2 class="add-top-margin">Distribution of Smell Reports Aggregated by Region</h2>
             <hr>
             <p class="text">
-              The following maps show the distribution of smell reports by Pittsburgh area zipcodes for 2017, 2018, and 2019.
+              The following maps show the distribution of smell reports by Pittsburgh area zip codes for 2017, 2018, and 2019.
               A darker color indicates more reports in an area.
-              Note that this map indicates citizen engagement with the Smell PGH app, but does not necessarily represent the severity of pollution.
-              In general, citizen engagement is increased over the three years, especially from 2018 to 2019.
+              Note that this map indicates citizen engagement with the Smell PGH app, but does not necessarily represent the severity of pollution in that region.
+              In general, citizen engagement was increased over the three years, especially from 2018 to 2019.
             </p>
             <div class="custom-tab">
               <div class="custom-tab-menu center">
@@ -421,26 +449,26 @@
               </div>
               <div class="custom-tab-content no-padding" data-content="2019">
                 <p class="text text-center graph-title add-top-right-left-padding add-bottom-border">
-                  Number of smell reports by zipcodes (2019)
+                  Number of smell reports by zip codes (2019)
                 </p>
                 <iframe class="iframe-in-tab" src="smell_map.html?year=2019&type=smell"></iframe>
               </div>
               <div class="custom-tab-content no-padding" data-content="2018">
                 <p class="text text-center graph-title add-top-right-left-padding add-bottom-border">
-                  Number of smell reports by zipcodes (2018)
+                  Number of smell reports by zip codes (2018)
                 </p>
                 <iframe class="iframe-in-tab" src="smell_map.html?year=2018&type=smell"></iframe>
               </div>
               <div class="custom-tab-content no-padding" data-content="2017">
                 <p class="text text-center graph-title add-top-right-left-padding add-bottom-border">
-                  Number of smell reports by zipcodes (2017)
+                  Number of smell reports by zip codes (2017)
                 </p>
                 <iframe class="iframe-in-tab" src="smell_map.html?year=2017&type=smell"></iframe>
               </div>
             </div>
             <p class="text">
-              Also, the number of our users increases over these three years in Pittsburgh.
-              The following maps show the distribution of unique users by Pittsburgh area zipcodes for 2017, 2018, and 2019.
+              Also, the number of our users increased over these three years in Pittsburgh.
+              The following maps show the distribution of unique users by Pittsburgh area zip codes for 2017, 2018, and 2019.
               A darker color indicates more unique users in an area.
             </p>
             <div class="custom-tab">
@@ -518,7 +546,7 @@
               The Allegany County Health Department operates these monitoring stations. Based on this finding, we investigated this relationship further, by date.
             </p>
             <p class="text">
-              We compare two metrics that are related to smell reports and data from county air quality monitors, respectively.
+              We compared two metrics that are related to smell reports and data from county air quality monitors, respectively.
               The first metric shows the sum of smell ratings for each day, excluding reports with ratings that are less than three.
               A darker color indicates a larger volume of smell reports on that date.
               The second metric shows the maximum concentration of hydrogen sulfide per day, weighted by the contributions of the wind directions (from the south and the east) at both the Parkway and Liberty monitoring stations.
@@ -530,7 +558,7 @@
               <img src="http://latex.codecogs.com/svg.latex?\theta_1" style="vertical-align: -0.2em;"> is the wind direction at the Liberty monitoring station,
               and <img src="http://latex.codecogs.com/svg.latex?\theta_2" style="vertical-align: -0.2em;"> is the wind direction at the Parkway monitoring station.
               A darker color in the second metric indicates a larger concentration of hydrogen sulfide in the area.
-              The correlation between these two metrics (the sum of smell ratings and the maximum weighted concentration of hydrogen sulfide per day) is 0.59 in 2019, 0.64 in 2018, and 0.65 in 2017.
+              The correlation between these two metrics (the sum of smell ratings and the maximum weighted concentration of hydrogen sulfide per day) was 0.59 in 2019, 0.64 in 2018, and 0.65 in 2017.
               This indicates that hydrogen sulfide was a significant driver of smell reports in these three years.
             </p>
             <div class="custom-tab">
