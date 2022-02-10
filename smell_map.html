@@ -80,7 +80,7 @@
       var data = {};
       var query_vars = getQueryParas();
       // IMPORTANT: to update this page, remember to add new available years
-      var available_years = ["2017", "2018", "2019"];
+      var available_years = ["2017", "2018", "2019", "2020", "2021"];
       var available_types = ["smell", "user"];
       year = available_years[0];
       type = available_types[0];
@@ -119,6 +119,18 @@
           path = "smell_pgh_tracker/zipcode_metadata_smell_2019.json"
         } else if (type == "user") {
           path = "smell_pgh_tracker/zipcode_metadata_user_2019.json"
+        }
+      } else if (year == "2020") {
+        if (type == "smell") {
+          path = "smell_pgh_tracker/zipcode_metadata_smell_2020.json"
+        } else if (type == "user") {
+          path = "smell_pgh_tracker/zipcode_metadata_user_2020.json"
+        }
+      } else if (year == "2021") {
+        if (type == "smell") {
+          path = "smell_pgh_tracker/zipcode_metadata_smell_2021.json"
+        } else if (type == "user") {
+          path = "smell_pgh_tracker/zipcode_metadata_user_2021.json"
         }
       }
       // Start loading data simultaneously
