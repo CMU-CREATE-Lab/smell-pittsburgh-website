@@ -12,7 +12,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://momentjs.com/downloads/moment.min.js"></script>
   <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
@@ -31,6 +31,15 @@
       margin-bottom: 0;
     }
   </style>
+  <!-- Google tag (gtag.js) Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQ0C1P9MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KXQ0C1P9MZ');
+  </script>
 </head>
 
 <body>
@@ -395,7 +404,7 @@
             <p class="text">
               We computed the number of unique users who submitted at least one smell report and used the map at least once, respectively (see <a href="#table2">Table 2</a>). 
               The number of interaction events with the map for each user was tracked anonymously using Google Analytics. 
-              This analysis shows that over 45% of our users contributed data, and over 80% of our users interacted with the map.
+              The analysis from 2017-2020 shows that over 45% of our users contributed data, and over 80% of our users interacted with the map.
             </p>
             <!--To update this table, see the table in the "smell_pgh_tracker/user_hist.csv" file-->
             <div id="table2" style="text-align: center; color: dimgray"><i><b>Table 2: User Engagement with The Smell PGH App</b></i></div>
@@ -1024,21 +1033,6 @@
   </div>
 </body>
 <script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-10682694-20', 'auto');
-  ga('send', 'pageview');
-
   function init() {
     widgets = new edaplotjs.Widgets();
 
